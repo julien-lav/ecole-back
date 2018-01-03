@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  current_year: 1
+  role: false
+
+two:
+  name: MyString
+  email: MyString
+  current_year: 1
+  role: false

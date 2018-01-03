@@ -10,4 +10,19 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def year_one
+  end
+
+  def year_two
+  end
+
+  def year_three
+  end
+
+  def year_four
+  end
+
+  def year_five
+  end
 end

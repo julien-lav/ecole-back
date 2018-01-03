@@ -1,0 +1,57 @@
+<% provide(:title, "Ajouter un utilisateur") %>
+<%= render 'layouts/header' %>
+<div class="ui container">
+
+<h1 class="">Sign up</h1>
+
+    <div class="ui form segment">
+    <%= form_for(@user) do |f| %>
+    <div class="two fields">
+      <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+      <div class="field">
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+      </div>
+    </div>
+    <div class="two fields">
+      <div class="field">
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+      </div>
+      <div class="field">
+        <%= f.label :password_confirmation, "Confirmation" %>
+        <%= f.password_field :password_confirmation %>
+     </div>
+   </div>
+   <div class="two fields">
+     <div class="field">
+       <label>Année de formation</label>
+       <select class="ui dropdown" name="current_year">
+         <option value="">Année en cours</option>
+         <option value="1">1ère année</option>
+         <option value="2">2ème année</option>
+         <option value="3">3ème année</option>
+         <option value="4">4ème année</option>
+         <option value="5">5ème année</option>
+       </select>
+     </div>
+     <div class="field">
+       <label>Rôle</label>
+       <select class="ui dropdown" name="role">
+         <option value="">Admin/Etudiant</option>
+         <option value="true">Admin</option>
+         <option value="=false">Etudiant</option>
+       </select>
+    </div>
+  </div>
+      <%= f.submit "Create my account", class: "ui primary submit button" %>
+        <div class="ui error message"></div>
+    <% end %>
+    </div>
+  </div>
+
+</div>
+<%= render 'layouts/footer' %>
