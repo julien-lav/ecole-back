@@ -1,9 +1,101 @@
 <% provide(:title, "Accueil") %>
 <%= render 'layouts/header' %>
 
-<div class="ui container">
-  <h1>StaticPages#home</h1>
-  <p>Find me in app/views/static_pages/home.html.erb</p>
+<style type="text/css">
+   body > .grid {
+     height: 100%;
+   }
+   .column {
+     max-width: 450px;
+   }
+</style>
+
+<div class="ui container" style="margin-bottom: 100px; text-align:center;">
+  <h1 class="">
+          <span class="">
+            Prépa cinéma Paris
+          </span></br>
+          <span class="">
+            Bienvenue sur le mooc
+          </span>
+  </h1>
 </div>
 
+
+<div class="ui container">
+  <div class="ui middle aligned center aligned grid" style="margin-bottom: 100px;">
+  <div class="column">
+    <h2 class="ui teal image header">
+      <div class="content">
+        Se connecter
+      </div>
+    </h2>
+    <%= form_for(:session, url: login_path) do |f| %>
+    <div class="ui large form"> <!-- form -->
+      <div class="ui stacked segment">
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <%= f.email_field :email, placeholder: "E-mail address"%>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <%= f.password_field :password, placeholder: "Password"%>
+          </div>
+        </div>
+        <%= f.submit "Login", class: "ui fluid large teal submit button" %>
+      </div>
+
+      <div class="ui error message"></div>
+
+    </div> <!-- form -->
+    <% end %>
+
+    <div class="ui message">
+      <a href="/help">Mot de passe oublié ?</a>
+    </div>
+  </div>
+  </div>
+</div>
+
+<script>
+ $(document)
+   .ready(function() {
+     $('.ui.form')
+       .form({
+         fields: {
+           email: {
+             identifier  : 'email',
+             rules: [
+               {
+                 type   : 'empty',
+                 prompt : 'Please enter your e-mail'
+               },
+               {
+                 type   : 'email',
+                 prompt : 'Please enter a valid e-mail'
+               }
+             ]
+           },
+           password: {
+             identifier  : 'password',
+             rules: [
+               {
+                 type   : 'empty',
+                 prompt : 'Please enter your password'
+               },
+               {
+                 type   : 'length[6]',
+                 prompt : 'Your password must be at least 6 characters'
+               }
+             ]
+           }
+         }
+       })
+     ;
+   })
+ ;
+ </script>
 <%= render 'layouts/footer' %>

@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/new'
-
-  get 'users/edit'
-
-  get 'users/update'
 
   root 'static_pages#home'
   get '/help', to: 'static_pages#help'
@@ -15,4 +10,9 @@ Rails.application.routes.draw do
   get '/year_four', to: 'static_pages#year_four'
   get '/year_five', to: 'static_pages#year_five'
   resources :users
+  get    '/users/new',  to: 'users#new' # user_new (for now for security purpose)
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
+
 end

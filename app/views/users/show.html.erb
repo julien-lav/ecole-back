@@ -2,7 +2,12 @@
 <%= render 'layouts/header' %>
 <div class="ui container">
   <h1>Users#Student information</h1>
-    <%= @user.name %>, <%= @user.email %>, <%= @user.current_year %>, <%= @user.role %>
+    <%= @user.name %>, <%= @user.email %>,
+
+    <% if @user.role === false %>
+      Etudiant en <%= @user.current_year %> ème année.
+    <% end %>
+
 </div>
 <%= render 'layouts/footer' %>
 </div>

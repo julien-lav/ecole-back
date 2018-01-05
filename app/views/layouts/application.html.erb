@@ -16,6 +16,14 @@
   </head>
 
   <body>
+
+    <div class="ui container">
+      <div style="margin-bottom: 55px;"></div>
+      <% flash.each do |message_type, message| %>
+         <div class="ui <%= message_type %> message"><%= message %></div>
+      <% end %>
+    </div>
+
     <%= yield %>
   </body>
 </html>

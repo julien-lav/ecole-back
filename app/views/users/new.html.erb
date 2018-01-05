@@ -31,6 +31,7 @@
        <%= f.label :current_year %>
        <%= f.select :current_year, options_for_select([['1ère année', 1], ['2ème année', 2], ['3ème année', 3], ['4ème année', 4], ['5ème année', 5]]) %>
      </div>
+     <!-- For safe purpose, this part is disabled, it needs f. something to be active-->
      <div class="field">
        <label>Rôle</label>
        <select class="ui dropdown" name="role">
@@ -40,7 +41,7 @@
        </select>
     </div>
   </div>
-      <%= f.submit "Create my account", class: "ui primary submit button" %>
+      <%= f.submit "Entrer un utilisateur", class: "ui primary submit button" %>
         <div class="ui error message"></div>
     <% end %>
     </div>

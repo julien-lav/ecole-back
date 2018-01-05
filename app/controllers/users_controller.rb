@@ -15,7 +15,6 @@ class UsersController < ApplicationController
   end
 
   def create
-
     @user = User.new(user_params)
     @user.role = params[:user][:role] === "true" ? true : false
     @user.save

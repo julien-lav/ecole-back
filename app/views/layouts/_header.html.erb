@@ -3,13 +3,23 @@
       <a href="http://prepa-cinema.surge.sh/" class="header item">
         Prépa cinéma Paris
       </a>
-      <%= link_to "Accueil", root_path, :class => "item" %>
-      <%= link_to "Programmes 1ère année", year_one_path, :class => "item" %>
-      <%= link_to "Programmes 2ème année", year_two_path, :class => "item" %>
-      <%= link_to "Programmes 3ème année", year_three_path, :class => "item" %>
-      <%= link_to "Programmes 4ème année", year_four_path, :class => "item" %>
-      <%= link_to "Programmes 5ème année", year_five_path, :class => "item" %>
-      <%= link_to "Deconnexion", contact_path, :class => "item" %>
+
+      <div class="ui simple dropdown item">
+        Les programmes <i class="dropdown icon"></i>
+        <div class="menu">
+          <%= link_to "1ère année", year_one_path, :class => "item" %>
+          <%= link_to "2ème année", year_two_path, :class => "item" %>
+          <%= link_to "3ème année", year_three_path, :class => "item" %>
+          <%= link_to "4ème année", year_four_path, :class => "item" %>
+          <%= link_to "5ème année", year_five_path, :class => "item" %>
+        </div>
+      </div>
+      <%= link_to "Accueil", root_path, :class => "item" %> <!-- à changer bientôt -->
+      <% if logged_in? %>
+        <%= link_to "Deconnexion", logout_path, method: :delete, :class => "item" %>
+      <% else %>
+        <%= link_to "Connexion", root_path, :class => "item" %>
+      <% end %>
       <%= link_to "Contact", contact_path, :class => "item" %>
     </div>
 </div>
