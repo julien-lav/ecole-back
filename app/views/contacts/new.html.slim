@@ -1,12 +1,49 @@
 
+.ui.fixed.inverted.menu
+  .ui.container
+    a.header.item href="/"
+      | Accueil
+    a.item href="http://prepa-cinema.surge.sh/" target="_blank"
+      | Prépa cinéma Paris
 
-<div class="ui container">
-  h1 Contact
-  = simple_form_for @contact, html: { class: 'form-horizontal' } do |f|
-    = f.input :name, required: true
-    = f.input :email, required: true
-    = f.input :message, as: :text, required: false, input_html: { rows: 10 }, hint: 'Max 2000 characters'
+div style=("margin-bottom: 100px;")
 
-    .form-actions
-      = f.button :submit, 'Send message', class: 'ui primary submit button'
-<div>
+.ui.container
+    h1 Contact
+    = simple_form_for @contact, html: { class: 'ui form' } do |f|
+      = f.input :name, required: true
+      = f.input :email, required: true
+      = f.input :message, as: :text, required: false, hint: 'Max 2000 characters'
+      .form-actions
+        = f.button :submit, 'Send message', class: 'ui primary submit button'
+
+.ui.inverted.vertical.footer.segment style="margin-top:60px;"
+  .ui.center.aligned.container
+    .ui.stackable.inverted.divided.grid
+      .three.wide.column
+        h4.ui.inverted.header Group 1
+        .ui.inverted.link.list
+          a.item href="#"  Link One
+          a.item href="#"  Link Two
+      .three.wide.column
+        h4.ui.inverted.header Group 2
+        .ui.inverted.link.list
+          a.item href="#"  Link One
+          a.item href="#"  Link Two
+      .three.wide.column
+        h4.ui.inverted.header Group 3
+        .ui.inverted.link.list
+          a.item href="#"  Link One
+          a.item href="#"  Link Two
+      .seven.wide.column
+        h4.ui.inverted.header Footer Header
+        p Extra space for a call to action inside the footer that could help re-engage users.
+    .ui.inverted.section.divider
+    /! <img src="assets/images/logo.png" class="ui centered mini image"
+    .ui.horizontal.inverted.small.divided.link.list
+      a.item href="#"  Plan du site
+      a.item href="#"  Conditions générales
+      | <%= link_to "Aide", help_path, :class => "item"%
+      | <%= link_to "À propos", about_path, :class => "item"%
+    div
+      a href="http://www.julienlaville.fr" target="_blank"  &copy;	- 2018 - Julien Laville
