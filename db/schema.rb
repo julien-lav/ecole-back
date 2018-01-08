@@ -17,8 +17,9 @@ ActiveRecord::Schema.define(version: 20180103145100) do
     t.string "email"
     t.integer "current_year"
     t.boolean "role"
-    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
+
 end

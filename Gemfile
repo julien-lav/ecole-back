@@ -17,6 +17,9 @@ gem 'jquery-rails', '4.3.1'
 gem 'bcrypt',       '3.1.7'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
+gem 'simple_form'
+gem 'slim-rails'
+gem 'mail_form'
 
 #gem 'devise'
 #gem 'react-rails'
@@ -26,6 +29,7 @@ group :development, :test do
   gem 'capybara', '2.13'
   gem 'sqlite3', '1.3.13'
   gem 'selenium-webdriver'
+  gem 'letter_opener_web'
 end
 
 group :development do

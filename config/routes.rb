@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   root 'static_pages#home'
   get '/help', to: 'static_pages#help'
   get '/about', to: 'static_pages#about'
@@ -14,5 +13,11 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+  get 'contacts/new'
+  get 'contacts/create'
+  resources 'contacts', only: [:new, :create], path_names: { new: '' }
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
 
 end
