@@ -1,11 +1,9 @@
 <% provide(:title, "À propos") %>
 <%= render 'layouts/header' %>
-
 <div class="ui container">
   <h1>Cours de deuxième année</h1>
   <p>Find me in app/views/static_pages/about.html.erb</p>
 </div>
-
 <div class="ui container">
   <% if logged_in? %>
     Cours de vidéo blabla
@@ -13,5 +11,4 @@
     Contenu visible par tout le monde
   <% end %>
 </div>
-
 <%= render 'layouts/footer' %>
