@@ -4,4 +4,11 @@
   <h1>Cours de quatrième année</h1>
   <p>Find me in app/views/static_pages/about.html.erb</p>
 </div>
+<div class="ui container">
+  <% if logged_in? %>
+    Cours de vidéo blabla
+  <% else %>
+    Contenu visible par tout le monde
+  <% end %>
+</div>
 <%= render 'layouts/footer' %>
