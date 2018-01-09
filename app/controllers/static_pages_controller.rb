@@ -25,4 +25,7 @@ class StaticPagesController < ApplicationController
 
   def year_five
   end
+
+  def info_page
+  end
 end

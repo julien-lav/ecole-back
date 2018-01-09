@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
+  get '/info_page', to: 'static_pages#info_page'
   get '/help', to: 'static_pages#help'
   get '/about', to: 'static_pages#about'
-  get '/contact', to: 'contacts#new'
+  # get '/contact', to: 'static_pages#contact'
   get '/year_one', to: 'static_pages#year_one'
   get '/year_two', to: 'static_pages#year_two'
   get '/year_three', to: 'static_pages#year_three'
@@ -19,4 +20,5 @@ Rails.application.routes.draw do
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
+
 end
