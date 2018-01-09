@@ -16,14 +16,13 @@
           <% end %>
         </div>
       </div>
-      <%= link_to "Contact", contacts_path, :class => "item" %>
       <% if logged_in? %>
-       <%= link_to "Mon profil", root_path, :class => "item" %>
+       <%= link_to "Mon profil", user_path(current_user), :class => "item" %>
        <%= link_to "Deconnexion", logout_path, method: :delete, :class => "item" %>
-
       <% else %>
         <%= link_to "Connexion", root_path, :class => "item" %>
       <% end %>
+      <%= link_to "Contact", contacts_path, :class => "item" %>
     </div>
 </div>
 <div style="margin-bottom: 100px;"></div>
