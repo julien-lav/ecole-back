@@ -1,10 +1,9 @@
-<% provide(:title, "À propos") %>
+<% provide(:title, "3ème année") %>
 <%= render 'layouts/header' %>
 <div class="ui container">
   <h1>Cours de troisième année</h1>
   <p>Find me in app/views/static_pages/about.html.erb</p>
 </div>
-
 <div class="ui container">
   <% if logged_in? %>
     Cours accessible une fois connecté !
@@ -12,5 +11,4 @@
     Sommaire
   <% end %>
 </div>
-
 <%= render 'layouts/footer' %>

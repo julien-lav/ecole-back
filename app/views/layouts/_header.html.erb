@@ -1,9 +1,6 @@
 <div class="ui fixed inverted menu">
     <div class="ui container">
-      <%= link_to "Accueil", info_page_path, :class => "header item" %> <!-- à changer bientôt -->
-      <% if false %>
-      <%= link_to "Accueil", root_path, :class => "header item" %> <!-- à changer bientôt -->
-      <% end %>
+      <%= link_to "Accueil", info_page_path, :class => "header item" %>
       <a href="http://prepa-cinema.surge.sh/" target="_blank" class="item">
         Prépa cinéma Paris
       </a>
@@ -19,12 +16,12 @@
           <% end %>
         </div>
       </div>
+      <%= link_to "Contact", contacts_path, :class => "item" %>
       <% if logged_in? %>
         <%= link_to "Deconnexion", logout_path, method: :delete, :class => "item" %>
       <% else %>
         <%= link_to "Connexion", root_path, :class => "item" %>
       <% end %>
-      <%= link_to "Contacts", contacts_path, :class => "item" %>
     </div>
 </div>
 <div style="margin-bottom: 100px;"></div>
