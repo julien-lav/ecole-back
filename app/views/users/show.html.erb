@@ -1,13 +1,63 @@
-<% provide(:title, "Admin") %>
+<% provide(:title, "Mon profil") %>
 <%= render 'layouts/header' %>
 <div class="ui container">
-  <h1>Users#Student information</h1>
-    <%= @user.name %>, <%= @user.email %>,
+  <h1>Mon profil</h1>
 
-    <% if @user.role === false %>
-      Etudiant en <%= @user.current_year %> ème année.
-    <% end %>
 
+
+    <div class="ui people shape">
+  <div class="sides">
+    <div class="active side">
+      <div class="ui card">
+        <div class="image">
+          <img src="https://semantic-ui.com/images/avatar/large/steve.jpg">
+        </div>
+        <div class="content">
+          <div class="header"><%= @user.name %></div>
+          <div class="meta">
+            <a><%= @user.email %></a>
+          </div>
+          <div class="description">
+            <% if @user.role === false %>
+              Etudiant en <%= @user.current_year %> ème année.
+            <% end %>
+          </div>
+        </div>
+        <div class="extra content">
+          <span class="right floated">
+            Joined in 2014
+          </span>
+          <span>
+            <i class="user icon"></i>
+            151 Friends
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="side">
+      <div class="ui card">
+        <div class="image">
+          <img src="/images/avatar/large/stevie.jpg">
+        </div>
+        <div class="content">
+          <a class="header">Stevie Feliciano</a>
+          <div class="meta">
+            <span class="date">Joined in 2014</span>
+          </div>
+          <div class="description">
+            Stevie Feliciano is a library scientist living in New York City. She likes to spend her time reading, running, and writing.
+          </div>
+        </div>
+        <div class="extra content">
+          <a>
+            <i class="user icon"></i>
+            22 Friends
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 <%= render 'layouts/footer' %>
 </div>
