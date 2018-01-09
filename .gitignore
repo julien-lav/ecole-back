@@ -21,3 +21,6 @@
 /yarn-error.log
 
 .byebug_history
+
+#Ignore production setup
+/config/environments/production.rb
