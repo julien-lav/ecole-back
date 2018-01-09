@@ -73,9 +73,17 @@ Rails.application.configure do
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
-  #Adding of the action mailer configuration
-  config.action_mailer.smtp_settings = { address: "info.prepa.cinema.gmail.com" }
-  config.action_mailer.default_url_options = { :host => "https://www.prepa-cinema.herokuapp.com" }
+  # Contact form
+  config.action_mailer.smtp_settings = {
+      address:              'smtp.gmail.com',
+      port:                 587,
+      domain:               'gmail.com',
+      user_name:            'info.prepa.cinema@gmail.com',
+      password:             'yourpassword',
+      authentication:       :plain,
+      enable_starttls_auto: true
+      }
+
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
