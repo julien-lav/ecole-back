@@ -28,4 +28,7 @@ class StaticPagesController < ApplicationController
 
   def accueil
   end
+
+  def la_formation
+  end
 end

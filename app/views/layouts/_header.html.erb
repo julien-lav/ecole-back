@@ -18,7 +18,7 @@
       </div>
       <% if logged_in? %>
        <%= link_to "Mon profil", user_path(current_user), :class => "item" %>
-       <%= link_to "Deconnexion", logout_path, method: :delete, :class => "item" %>
+       <%= link_to "Déconnexion", logout_path, method: :delete, :class => "item" %>
       <% else %>
         <%= link_to "Connexion", root_path, :class => "item" %>
       <% end %>

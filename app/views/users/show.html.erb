@@ -6,7 +6,9 @@
     <div class="ui people shape">
       <div class="ui card">
         <div class="image">
-          <% if Time.new.min % 2 === 0  %>
+          <% if Time.new.min % 3 === 0  %>
+          <img src=" https://semantic-ui.com/images/movies/12years-horizontal.jpg">
+          <% elsif Time.new.min % 2 === 0  %>
           <img src=" https://semantic-ui.com/images/movies/totoro-horizontal.jpg">
           <% else %>
           <img src="https://semantic-ui.com/images/movies/watchmen-horizontal.jpg">
@@ -34,6 +36,9 @@
         </div>
       </div>
   </div>
+
+  <%= link_to "Voir le calendier", year_one_path, :class => "header" %>
+
 
 </div>
 <%= render 'layouts/footer' %>
