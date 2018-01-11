@@ -2,7 +2,25 @@
 <%= render 'layouts/header' %>
 <div class="ui container">
   <%= month_calendar do |date| %>
-  <%= date.strftime("%m-%d") %>
+  <%= date.strftime("%d") %>
   <% end %>
 </div>
 <%= render 'layouts/footer' %>
+
+
+<style>
+
+    table {margin: 20px 0 20px 0} a { margin: 0 10px 0 10px}
+    .simple-calendar {}
+    .day{padding: 20px;}
+    .wday-0 {} .wday-1 {} .wday-2 {} .wday-3 {} .wday-4 {} .wday-5 {} .wday-6 {}
+    .today {}
+    .past {}
+    .future {}
+    .start-date {}
+    .prev-month {}
+    .next-month {}
+    .current-month {}
+    .has-events {}
+
+</style>
