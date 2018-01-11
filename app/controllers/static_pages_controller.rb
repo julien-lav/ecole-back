@@ -31,4 +31,7 @@ class StaticPagesController < ApplicationController
 
   def la_formation
   end
+
+  def calendar
+  end
 end

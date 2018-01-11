@@ -1,0 +1,8 @@
+<% provide(:title, "Calendar") %>
+<%= render 'layouts/header' %>
+<div class="ui container">
+  <%= month_calendar do |date| %>
+  <%= date.strftime("%m-%d") %>
+  <% end %>
+</div>
+<%= render 'layouts/footer' %>

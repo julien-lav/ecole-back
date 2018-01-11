@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'calendars/show', to: 'calendars#show'
-
   root 'static_pages#home'
   get '/info_page', to: 'static_pages#info_page'
   get '/help', to: 'static_pages#help'
@@ -13,6 +11,7 @@ Rails.application.routes.draw do
   get '/year_four', to: 'static_pages#year_four'
   get '/year_five', to: 'static_pages#year_five'
   get '/la_formation', to: 'static_pages#la_formation'
+  get '/calendar', to: 'static_pages#calendar'
   resources :users
   get '/list', to: 'users#list'
   get    '/users/new',  to: 'users#new' # user_new (for now for security purpose)
