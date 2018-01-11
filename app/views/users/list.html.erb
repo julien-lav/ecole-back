@@ -1,0 +1,52 @@
+<% provide(:title, "Liste des étudiants") %>
+<%= render 'layouts/header' %>
+<div class="ui container">
+  <h1>Liste des étudiants : </h1>
+
+  <table class="ui compact celled definition table">
+    <thead>
+      <tr>
+          <th>Nom : </th>
+          <th>Email : </th>
+          <th>Année d'étude : </th>
+          <th>Entré le : </th>
+          <th>Voir la fiche : </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user|%>
+      <tr>
+        <% if user.role == false && user.name.delete(' ') != "" %>
+          <td> <%= user.name %> </td>
+          <td> <%= user.email %> </td>
+          <td> <%= user.current_year %> </td>
+          <td> <%= user.created_at.to_date %> </td>
+           <td>
+             <%= link_to 'Show', user, class: "ui small button" %>
+           </td>
+        <% end %>
+      </tr>
+      <% end %>
+    </tbody>
+    <tfoot class="full-width">
+      <tr>
+        <th></th>
+        <th colspan="4">
+          <a href="/users/new" class="ui right floated small primary labeled icon button">
+            <i class="user icon"></i> Add User
+          </a>
+          <div class="ui small button">
+            Approve
+          </div>
+          <div class="ui small disabled button">
+            Approve All
+          </div>
+        </th>
+      </tr>
+    </tfoot>
+  </table>
+
+
+  </div>
+  <%= render 'layouts/footer' %>
+  </div>

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  get 'calendars/show', to: 'calendars#show'
+
   root 'static_pages#home'
   get '/info_page', to: 'static_pages#info_page'
   get '/help', to: 'static_pages#help'
@@ -11,6 +14,7 @@ Rails.application.routes.draw do
   get '/year_five', to: 'static_pages#year_five'
   get '/la_formation', to: 'static_pages#la_formation'
   resources :users
+  get '/list', to: 'users#list'
   get    '/users/new',  to: 'users#new' # user_new (for now for security purpose)
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
@@ -18,6 +22,7 @@ Rails.application.routes.draw do
   get 'contacts/new'
   get 'contacts/create'
   resources 'contacts', only: [:new, :create], path_names: { new: '' }
+  resource 'calendar', only: [:show]
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
