@@ -37,7 +37,36 @@
     </div>
     </div>
   <% else %>
-    Sommaire
+  <div class="ui two column grid">
+  <div class="column">
+    <div class="ui segment">
+
+        <%= image_tag("PRATIQUE.jpg", :alt => "Cours", :style => "width: 100%;") %>
+      
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui segment">
+
+      <%= image_tag("THEORIQUE.jpg", :alt => "rss feed", :style => "width: 100%;") %>
+      
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui segment">
+
+      <%= image_tag("ART_PLASTIQUES.jpg", :alt => "rss feed", :style => "width: 100%;") %>
+      
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui segment">
+
+      <%= image_tag("PRODUCTIONS.jpg", :alt => "rss feed", :style => "width: 100%;") %>
+      
+    </div>
+  </div>
+  </div>
   <% end %>
 </div>
 <%= render 'layouts/footer' %>
