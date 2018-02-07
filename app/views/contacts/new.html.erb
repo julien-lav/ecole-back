@@ -1,0 +1,21 @@
+
+<% provide(:title, "Contact") %>
+<%= render 'layouts/header' %>
+
+      <div class="ui container">
+        <h1>StaticPages#contact</h1>
+      </div>
+
+    <div style="margin-bottom: 100px;"></div>
+
+<div class="ui container">
+  <h1> Contact </h1>
+      <%= simple_form_for @contact, html: { class: 'ui form' } do |f| %>
+      <%= f.input :name, required: true %>
+      <%= f.input :email, required: true %>
+      <%= f.input :message, as: :text, required: false, hint: 'Max 2000 characters',
+        class: 'form-actions' %>
+      <%= f.button :submit, 'Send message', class: 'ui primary submit button' %>
+      <% end %>
+</div>
+<%= render 'layouts/footer' %>
