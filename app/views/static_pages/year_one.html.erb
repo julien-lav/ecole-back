@@ -1,14 +1,45 @@
 <% provide(:title, "1ère année") %>
 <%= render 'layouts/header' %>
+<%= render 'nav_first' %>
+
 <div class="ui container">
   <h1>Cours de première année</h1>
   <p>Find me in app/views/static_pages/about.html.erb</p>
 </div>
 <div class="ui container">
   <% if logged_in? %>
-    Cours accessible une fois connecté !
+    <div class="ui two column grid">
+    <div class="column">
+      <div class="ui segment">
+        <a href="#">
+          <%= image_tag("PRATIQUE.jpg", :alt => "Cours", :style => "width: 100%;") %>
+        </a>
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui segment">
+        <a href="#">
+        <%= image_tag("THEORIQUE.jpg", :alt => "rss feed", :style => "width: 100%;") %>
+        </a>
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui segment">
+        <a href="#">
+        <%= image_tag("ART_PLASTIQUES.jpg", :alt => "rss feed", :style => "width: 100%;") %>
+        </a>
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui segment">
+        <a href="#">
+        <%= image_tag("PRODUCTIONS.jpg", :alt => "rss feed", :style => "width: 100%;") %>
+        </a>
+      </div>
+    </div>
+    </div>
   <% else %>
     Sommaire
   <% end %>
-</div>
-<%= render 'layouts/footer' %>
+  </div>
+  <%= render 'layouts/footer' %>

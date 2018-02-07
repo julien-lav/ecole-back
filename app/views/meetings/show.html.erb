@@ -1,0 +1,18 @@
+<% provide(:title, "Calendar") %>
+<%= render 'layouts/header' %>
+<div class="ui container">
+  <p>
+  <%= @meeting.name %>
+  </p>
+  <p>
+  <%= @meeting.start_time %>
+  </p>
+  <p>
+  <%= @meeting.end_time %>
+  </p>
+
+  <% if logged_in? && current_user.role == true %>
+  <%= link_to 'Edit', edit_meeting_path(@meeting) %> </td>
+  <% end %>
+  <%= link_to 'Back', meeting_path %> </td>
+  </div>

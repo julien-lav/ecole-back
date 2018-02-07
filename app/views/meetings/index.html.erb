@@ -16,17 +16,22 @@
       <% @meetings.each do |meeting| %>
         <tr>
           <td> <%= meeting.name %> &nbsp; </td>
-          <td> <%= meeting.start_time %> &nbsp; </td>
-          <td> <%= meeting.end_time %> &nbsp; </td>
+          <td> <%= meeting.start_time.strftime("%H heure(s) %M") %> &nbsp; </td>
+          <td> <%= meeting.end_time.strftime("%H heure(s) %M") %> &nbsp; </td>
           <td> <%= link_to 'Show', meeting %> &nbsp; </td>
+          <% if logged_in? && current_user.role == true %>
           <td> <%= link_to 'Edit', edit_meeting_path(meeting) %> &nbsp; </td>
           <td> <%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, :class => 'delete_meeting' %> </td>
+          <% end %>
         </tr>
       <% end %>
     </tbody>
   </table>
 <br>
+
+<% if logged_in? && current_user.role == true %>
 <%= link_to 'New Meeting', new_meeting_path %>
+<% end %>
 
 <div style="margin:5px 0 80px 0;"></div>
 
@@ -46,16 +51,23 @@
 <!-- To move to real css latter on -->
 <style>
     table {margin: 5px 0 40px 0} a { margin: 0 10px 0 10px} td.day {width:160px; text-align: center;}
-    .simple-calendar {}
-    .day{padding: 20px;}
-    .wday-0 {} .wday-1 {} .wday-2 {} .wday-3 {} .wday-4 {} .wday-5 {} .wday-6 {}
-    .today {}
+    .simple-calendar {font-size: 15px;}
+    .simple-calendar th{padding: 30px 0 30px 0;}
+    .day{padding: 50px 22px 50px 22px;}
+    .wday-0 {background-color: #e8e8e8e8}
+    .wday-1 {background-color: #e8e8e8e8}
+    .wday-2 {background-color: #f6f6f6f6}
+    .wday-3 {background-color: #e8e8e8e8}
+    .wday-4 {background-color: #f6f6f6f6}
+    .wday-5 {background-color: #e8e8e8e8}
+    .wday-6 {background-color: #f6f6f6f6}
+    .today {border: 2px dotted grey; }
     .past {}
     .future {}
     .start-date {}
     .prev-month {}
     .next-month {}
     .current-month {}
-    .has-events {}
+    .has-events {background-color: #dfea8a}
 </style>
 <%= render 'layouts/footer' %>
