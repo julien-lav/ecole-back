@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+ @import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+ body{
+   background:url(https://unsplash.imgix.net/reserve/aOcWqRTfQ12uwr3wWevA_14401305508_804b300054_o.jpg?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=61cd02d7161cfaa8057ac6265b902999) center no-repeat;
+   background-size:cover;
+ }
+ a{
+   text-decoration:none;
+   color:#444;
+ }
+ h1{
+   color:#0a2f54;
+   margin:10px 0 20px 0
+ }
+ .wrap{
+  position:relative;
+  background:rgba(255,255,255,0.5);
+  max-width:600px;
+  margin:90px auto;
+  padding:50px;
+  border-radius:5px;
+  font-family: 'Droid Sans', sans-serif;
+  color:#222;
+  line-height:25px;
+  transition:all 0.2s
+ }
