@@ -7,10 +7,20 @@
       <div class="ui simple dropdown item">
         Les programmes <i class="dropdown icon"></i>
         <div class="menu">
+
           <%= link_to "1ère année", year_one_path, :class => "item" %>
           <%= link_to "2ème année", year_two_path, :class => "item" %>
-          <%= link_to "3ème année", year_three_path, :class => "item" %>
+
+          <div class="item">
+              <i class="dropdown icon"></i> Sub Menu
+              <div class="menu">
+                <a class="item" href="#">Link Item</a>
+                <a class="item" href="#">Link Item</a>
+              </div>
+          </div>
+
           <% if false %>
+            <%= link_to "3ème année", year_three_path, :class => "item" %>
             <%= link_to "4ème année", year_four_path, :class => "item" %>
             <%= link_to "5ème année", year_five_path, :class => "item" %>
           <% end %>
@@ -25,3 +35,13 @@
       <%= link_to "Contact", contacts_path, :class => "item" %>
     </div>
 </div>
+
+<!--
+<div class="item">
+          <i class="dropdown icon"></i> Sub Menu
+          <div class="menu">
+            <a class="item" href="#">Link Item</a>
+            <a class="item" href="#">Link Item</a>
+          </div>
+        </div>
+-->
