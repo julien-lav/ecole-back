@@ -13,7 +13,7 @@ config.action_mailer.smtp_settings = {
     }
 
 
-User.create(:name => 'Admin', :email => 'administrator@mail.fr', :current_year => 5, :role => true, :password => 'nintendo', :password_confirmation => 'nintendo')
+User.create(:name => 'Admin', :email => 'admin@mail.fr', :current_year => 5, :role => true, :password => 'antoine', :password_confirmation => 'antoine')
 
 
 User.create(:name => 'Admin', :email => 'blabla@mail.fr', :current_year => 5, :role => false, :password => 'kjazbdlh', :password_confirmation => 'kjazbdlh')
