@@ -1,7 +1,6 @@
 <% provide(:title, "À la une") %>
 <%= render 'layouts/header' %>
 
-
 <div class="ui container">
   <h1>À la une</h1>
   <div class="wrap">
@@ -25,27 +24,16 @@
     </article>
   </div>
 
+<% @infos.each do |info| %>
   <div class="wrap">
-    <h1>Rmation</h1>
+    <h1><%= info.title %></h1>
     <article>
       <p>
-        Podcasting visionary, feeds; open-source one-to-one user-contributed world-class e-markets
-        action-items rich initiatives proactive real-time, webservices; synergies, granular holistic
-        relationships, portals communities.
-      </p>
-      <p>
-        Podcasting visionary, feeds; open-source one-to-one user-contributed world-class e-markets
-        action-items rich initiatives proactive real-time, webservices; synergies, granular holistic
-        relationships, portals communities.
-      </p>
-      <p>
-        Podcasting visionary, feeds; open-source one-to-one user-contributed world-class e-markets
-        action-items rich initiatives proactive real-time, webservices; synergies, granular holistic
-        relationships, portals communities.
+         <%= info.body %>
       </p>
     </article>
   </div>
-
+<% end %>
 
 </div>
 <%= render 'layouts/footer' %>

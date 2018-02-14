@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @info.title
+p
+  strong Body:
+  = @info.body
+
+=> link_to 'Edit', edit_info_path(@info)
+'|
+=< link_to 'Back', infos_path

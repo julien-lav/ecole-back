@@ -3,16 +3,22 @@
 
 
 <div class="ui container">
-  <h1>StaticPages#admin</h1>
-  <p>Find me in app/views/static_pages/admin.html.erb</p>
+  <h1 style="color: white;">StaticPages#admin</h1>
+  <!-- <p>Find me in app/views/static_pages/admin.html.erb</p> -->
 </div>
 
 <div class="ui container">
   <p>
-    <%= link_to 'Ajouter une date au calendrier', meetings_path %>
+    <%= link_to 'Ajouter une date au calendrier', meetings_path, :class => "ui secondary button" %>
   </p>
-    <p>
-    <%= link_to 'Ajouter une date au calendrier', meetings_path %>
+  <p>
+    <%= link_to 'Ajouter un étudiant', users_new_path, :class => "ui secondary button" %>
+  </p>
+  <p>
+    <%= link_to 'Ajouter une Info', new_info_path, :class => "ui secondary button" %>
+  </p>
+  <p>
+    <%= link_to 'Ajouter un cours', meetings_path, :class => "ui secondary button" %>
   </p>
 </div>
 <%= render 'layouts/footer' %>

@@ -17,6 +17,7 @@ class StaticPagesController < ApplicationController
   end
 
   def info_page
+    @infos = Info.all.order("created_at DESC")
   end
 
   def year_one
