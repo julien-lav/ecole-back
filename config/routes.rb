@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :meetings
   root 'static_pages#home'
   get '/info_page', to: 'static_pages#info_page'
+  get '/admin', to: 'static_pages#admin'
   get '/help', to: 'static_pages#help'
   get '/about', to: 'static_pages#about'
   # get '/contact', to: 'static_pages#contact'

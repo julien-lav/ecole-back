@@ -1,14 +1,22 @@
 class StaticPagesController < ApplicationController
-  def home
-  end
 
-  def help
+  def admin
+      render 'info_page' unless logged_in? && current_user.role == true
   end
 
   def about
   end
 
   def contact
+  end
+
+  def home
+  end
+
+  def help
+  end
+
+  def info_page
   end
 
   def year_one
