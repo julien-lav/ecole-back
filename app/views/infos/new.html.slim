@@ -1,5 +1,9 @@
-h1 New info
+==provide(:title, "Add info")
+== render 'layouts/header'
 
-== render 'form'
+.ui.container
+  h1 New info
+  == render 'form'
+  = link_to 'Back', infos_path
 
-= link_to 'Back', infos_path
+== render 'layouts/footer'

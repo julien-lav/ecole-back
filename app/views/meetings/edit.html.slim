@@ -1,7 +1,12 @@
-h1 Editing meeting
+==provide(:title, "Edit meeting")
+== render 'layouts/header'
 
-== render 'form'
+  h1 Editing meeting
 
-=> link_to 'Show', @meeting
-'|
-=< link_to 'Back', meetings_path
+  == render 'form'
+
+  => link_to 'Show', @meeting, class: 'ui secondary basic button'
+  '|
+  =< link_to 'Back', meetings_path, class: 'ui secondary basic button'
+
+== render 'layouts/header'

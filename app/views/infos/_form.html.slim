@@ -1,9 +1,12 @@
 = simple_form_for(@info) do |f|
   = f.error_notification
-
-  .form-inputs
-    = f.input :title
-    = f.input :body
-
-  .form-actions
-    = f.button :submit
+  .ui.form
+    .form-inputs
+      = f.input :title
+      = f.input :body
+      = f.input :body_2
+      = f.input :body_3
+      div(style='margin-top:18px;')
+    .form-actions
+      = f.button :submit, 'Créer une info', class: 'ui primary submit button'
+      div(style='margin-top:5px;')

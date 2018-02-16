@@ -14,6 +14,7 @@ class InfosController < ApplicationController
 
   # GET /infos/new
   def new
+    redirect_to info_page_path unless logged_in? && current_user.role == true
     @info = Info.new
   end
 
@@ -69,6 +70,6 @@ class InfosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def info_params
-      params.require(:info).permit(:title, :body)
+      params.require(:info).permit(:title, :body, :body_2, :body_3)
     end
 end

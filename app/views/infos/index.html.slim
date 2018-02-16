@@ -1,23 +1,34 @@
-h1 Listing infos
+== render 'layouts/header'
+.ui.container
 
-table
-  thead
-    tr
-      th Title
-      th Body
-      th
-      th
-      th
+  h1 Listing infos
 
-  tbody
-    - @infos.each do |info|
+
+
+  table
+    thead
       tr
-        td = info.title
-        td = info.body
-        td = link_to 'Show', info
-        td = link_to 'Edit', edit_info_path(info)
-        td = link_to 'Destroy', info, data: { confirm: 'Are you sure?' }, method: :delete
+        th Title
+        th Body
+        th Body_2
+        th Body_3
+        th
+        th
+        th
 
-br
+    tbody
+      - @infos.each do |info|
+        tr
+          td = info.title
+          td = info.body
+          td = info.body_2
+          td = info.body_3
+          td = link_to 'Show', info, class: 'ui secondary basic button'
+          td = link_to 'Edit', edit_info_path(info), class: 'ui secondary basic button'
+          td = link_to 'Destroy', info, data: { confirm: 'Are you sure?' }, method: :delete, class: 'ui negative basic button'
 
-= link_to 'New Info', new_info_path
+  br
+
+  = link_to 'New Info', new_info_path, class: 'ui primary basic button'
+
+== render 'layouts/footer'

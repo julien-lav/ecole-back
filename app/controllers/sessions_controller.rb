@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
      log_in user
      redirect_to user, notice: 'Connecté !'
    else
-     flash.now[:orange] = 'Erreur - Mauvais email ou mot de passe !'
+     flash.now[:orange] = 'Erreur : Mauvais email ou mot de passe !'
      render 'new'
    end
  end

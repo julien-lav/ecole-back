@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
 
   def admin
-      render 'info_page' unless logged_in? && current_user.role == true
+      redirect_to info_page_path unless logged_in? && current_user.role == true
   end
 
   def about

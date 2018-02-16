@@ -18,10 +18,10 @@
           <td> <%= meeting.name %> &nbsp; </td>
           <td> <%= meeting.start_time.strftime("%H heure(s) %M") %> &nbsp; </td>
           <td> <%= meeting.end_time.strftime("%H heure(s) %M") %> &nbsp; </td>
-          <td> <%= link_to 'Show', meeting %> &nbsp; </td>
+          <td> <%= link_to 'Show', meeting, class: 'ui secondary basic button'  %> &nbsp; </td>
           <% if logged_in? && current_user.role == true %>
-          <td> <%= link_to 'Edit', edit_meeting_path(meeting) %> &nbsp; </td>
-          <td> <%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, :class => 'delete_meeting' %> </td>
+          <td> <%= link_to 'Edit', edit_meeting_path(meeting), class: 'ui secondary basic button'  %> &nbsp; </td>
+          <td> <%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, :class => 'delete_meeting', class: 'ui negative basic button' %> </td>
           <% end %>
         </tr>
       <% end %>
@@ -30,7 +30,7 @@
 <br>
 
 <% if logged_in? && current_user.role == true %>
-<%= link_to 'New Meeting', new_meeting_path %>
+<%= link_to 'New Meeting', new_meeting_path, class: 'ui primary basic button' %>
 <% end %>
 
 <div style="margin:5px 0 80px 0;"></div>

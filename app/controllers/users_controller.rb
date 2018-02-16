@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   end
 
   def new
+    redirect_to info_page_path unless logged_in? && current_user.role == true
     @user = User.new
   end
 

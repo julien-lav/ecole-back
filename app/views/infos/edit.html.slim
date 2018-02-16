@@ -1,8 +1,11 @@
-h1 Editing info
+== render 'layouts/header'
+.ui.container
+  h1 Editing info
 
-== render 'form'
+  == render 'form'
 
-=> link_to 'Show', @info
-'|
-=< link_to 'Back', infos_path
+  => link_to 'Show', @info
+  '|
+  =< link_to 'Back', infos_path
 
+== render 'layouts/footer'
