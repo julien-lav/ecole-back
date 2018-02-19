@@ -5,7 +5,7 @@
   <h1>StaticPages#la_formation</h1>
   <p>Find me in app/views/static_pages/la_formation.html.erb</p>
 </div>
--->
+--><!--
 <div class="ui top attached demo menu">
   <a class="item">
     <i class="sidebar icon"></i> Menu
@@ -36,13 +36,14 @@
     </div>
   </div>
 </div>
-<!--
+-->
 <div class="ui left labeled icon inline vertical main menu sidebar inverted" style="margin-top: 200px;">
   <a class="item"> <i class="university icon" style="color: #1b1c1d;"></i></a>
   <a class="item"> <i class="university icon"> </i>Promo 2018</a>
   <a class="item"><i class="user circle outline layout icon"></i>Realisateur invité</a>
   <a class="item"><i class="tv icon"></i>Video-conf</a>
   <a class="item"><i class="record icon"></i>Moocs</a>
+  <a class="item"><i class="student icon"></i>Cours spécifiques</a>
   <a class="item"><i class="book icon"></i>Base de données</a>
   <a class="item"><i class="film icon"></i>Films</a>
   <a class="item"><i class="idea icon"></i>Ressources</a>
@@ -89,12 +90,14 @@ margin: 0 5rem;
 </style>
 
 <script type="text/javascript">
+/*
 $('.ui.sidebar').sidebar({
     context: $('.bottom.segment')
   })
-  .sidebar('attach events', '.menu .item');
-// main menu
-/*
+  .sidebar('attach events', '.menu .item');*/
+
+/* main menu */
+
 $('.main.sidebar')
   .sidebar('attach events', '.item.sidebar')
   .sidebar('setting', 'transition', 'push');
@@ -105,7 +108,7 @@ $('.secondary.menu .ui.sidebar')
   .sidebar('attach events', '.secondary.menu .item')
   .sidebar('setting', 'transition', 'push')
   .sidebar('setting', 'dimPage', false)
-*/
+
 </script>
 
 

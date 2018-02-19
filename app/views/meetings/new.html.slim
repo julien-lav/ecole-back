@@ -1,5 +1,10 @@
-h1 New meeting
+==provide(:title, "Edit meeting")
+== render 'layouts/header'
+.ui.container
+  h1 New meeting
 
-== render 'form'
+  == render 'form'
 
-= link_to 'Back', meetings_path
+  = link_to 'Back', meetings_path
+
+== render 'layouts/footer'

@@ -10,15 +10,16 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+
+
  */
+
  @import url(https://fonts.grails oogleapis.com/css?family=Droid+Sans);
  body{
    /*https://unsplash.imgix.net/reserve/aOcWqRTfQ12uwr3wWevA_14401305508_804b300054_o.jpg?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=61cd02d7161cfaa8057ac6265b902999*/
    /* http://www.image-heberg.fr/files/1518220191834598049.jpg */
-   background:url(http://www.image-heberg.fr/files/1518220191834598049.jpg) center no-repeat;
-   background-size: cover;
+   background:url(https://unsplash.imgix.net/reserve/aOcWqRTfQ12uwr3wWevA_14401305508_804b300054_o.jpg?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=61cd02d7161cfaa8057ac6265b902999) center no-repeat;
+   background-size:cover;
  }
  a{
    text-decoration:none;
