@@ -21,6 +21,7 @@ gem "simple_calendar", '2.0'
 gem 'simple_form'
 gem 'slim-rails'
 gem 'mail_form'
+gem 'kaminari'
 
 #gem 'devise'
 #gem 'react-rails'

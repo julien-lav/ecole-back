@@ -11,6 +11,7 @@
           <th>Année d'étude : </th>
           <th>Entré le : </th>
           <th>Voir la fiche : </th>
+          <th>Effacer l'étudiant : </th>
       </tr>
     </thead>
     <tbody>
@@ -23,6 +24,9 @@
           <td> <%= user.created_at.to_date %> </td>
            <td>
              <%= link_to 'Show', user, class: "ui small button" %>
+           </td>
+           <td>
+             <%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, :class => 'delete_user', class: 'ui negative basic button' %>
            </td>
         <% end %>
       </tr>

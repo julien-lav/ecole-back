@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    redirect_to info_page_path unless current_user.id == @user.id || current_user.role == true
   end
 
   def new
@@ -23,7 +24,14 @@ class UsersController < ApplicationController
   end
 
   def list
-    @users = User.all
+    redirect_to info_page_path unless logged_in? && current_user.role == true
+    @users = User.all.order("name ASC")
+  end
+
+  def destroy
+      @user = User.find(params[:id])
+      @user.delete
+      redirect_to list_path
   end
 
   private

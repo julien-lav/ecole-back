@@ -3,6 +3,10 @@
 
 <div class="ui container">
   <h1>À la une</h1>
+  <span style="color: white;">
+    <%= paginate @infos %>
+  </span>
+  <!--
   <div class="wrap">
     <h1>Info</h1>
     <article>
@@ -22,7 +26,7 @@
         relationships, portals communities.
       </p>
     </article>
-  </div>
+  </div> -->
 
 <% @infos.each do |info| %>
   <div class="wrap">
