@@ -42,37 +42,50 @@
       <h2>Informations utiles :</h2><br>
     </div> -->
     <div class="ui horizontal segments">
-    <div class="ui segment">
-      <p>
+      <div class="ui segment">
+        <p>
         <% if logged_in? && current_user.role == true %>
-      <%= link_to "Voir la page Admin", admin_path, :class => "header" %> </br>
-      <% end %>
-      <%= link_to "Voir le calendier", meetings_path, :class => "header" %> </br>
-      <a href="https://prepa-cinema.slack.com/" target="_blank" class="header">
-        Aller sur slack
-      </a> </br>
-    </p>
-    </div>
-    <div class="ui segment">
-      <p>
-        Middle
-      </p>
-    </div>
-    <div class="ui segment">
-      <p>
-        <a href="https://www.youtube.com/channel/UC0qZ4P8CyfRDxIzsn2Fcdsw/videos" target="_blank" class="header">
-          Vidéos des étudiants
+        <%= link_to "Voir la page Admin", admin_path, :class => "header", :style => "color: black;" %> </br>
+        <% end %>
+        <%= link_to "Voir le calendier", meetings_path, :class => "header", :style => "color: black;" %> </br>
+        <a href="https://prepa-cinema.slack.com/" target="_blank" class="header" style="color: black;">
+          Aller sur slack
         </a> </br>
-        <a href="https://www.themoviedb.org/" class="header">
-          "The movie database"
-        </a></br>
       </p>
+      </div>
+      <div class="ui segment">
+        <p>
+          Middle
+        </p>
+      </div>
+      <div class="ui segment">
+        <p>
+          <a href="https://www.youtube.com/channel/UC0qZ4P8CyfRDxIzsn2Fcdsw/videos" target="_blank" class="header" style="color: black;">
+            Vidéos des étudiants
+          </a> </br>
+          <a href="https://www.themoviedb.org/" class="header" style="color: black;">
+            "The movie database"
+          </a></br>
+        </p>
+      </div>
+    </div>
+    <div class="ui horizontal segments">
+      <div class="ui segment">
+        <p>
+        </p>
+      </div>
+      <div class="ui segment">
+        <p>
+        </p>
+      </div>
+      <div class="ui segment">
+        <p>
+        </p>
+      </div>
     </div>
   </div>
 
-
-
-  </div>
+  <div style="margin-bottom: 200px;"></div>
 </div>
 <%= render 'layouts/footer' %>
 </div>
