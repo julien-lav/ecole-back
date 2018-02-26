@@ -1,0 +1,43 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+ @import url(https://fonts.grails oogleapis.com/css?family=Droid+Sans);
+ body{
+   /*https://unsplash.imgix.net/reserve/aOcWqRTfQ12uwr3wWevA_14401305508_804b300054_o.jpg?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=61cd02d7161cfaa8057ac6265b902999*/
+   /* http://www.image-heberg.fr/files/1518220191834598049.jpg */
+   background:url(http://www.image-heberg.fr/files/15196339411334903187.jpg) center no-repeat;
+   background-size: cover;
+ }
+ a{
+   color: white;
+   text-decoration:none;
+ }
+ h1{
+   color:#ffffff;
+   margin:10px 0 20px 0
+ }
+ .wrap{
+  position:relative;
+  background:rgba(255,255,255,0.5);
+  max-width:600px;
+  margin:90px auto;
+  padding:50px;
+  border-radius:5px;
+  font-family: 'Droid Sans', sans-serif;
+  color:#222;
+  line-height:25px;
+  transition:all 0.2s
+ }
