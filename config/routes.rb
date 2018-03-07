@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/year_three', to: 'static_pages#year_three'
   get '/year_four', to: 'static_pages#year_four'
   get '/year_five', to: 'static_pages#year_five'
-  get '/la_formation', to: 'static_pages#la_formation'
+  get '/la_formation_1', to: 'static_pages#la_formation_1'
   get '/la_formation_2', to: 'static_pages#la_formation_2'
   get '/calendar', to: 'static_pages#calendar'
   resources :users

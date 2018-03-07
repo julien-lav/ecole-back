@@ -38,7 +38,7 @@ class StaticPagesController < ApplicationController
   def accueil
   end
 
-  def la_formation
+  def la_formation_1
   end
 
   def la_formation_2
