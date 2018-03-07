@@ -14,16 +14,7 @@
 </div>
 <div class="ui bottom attached segment">
   <div class="ui inverted labeled icon left inline vertical demo sidebar menu">
-    <a class="item"> <i class="university icon"> </i>Promo 2018</a>
-    <a class="item"><i class="user circle outline layout icon"></i>Realisateur invité</a>
-    <a class="item"><i class="tv icon"></i>Video-conf</a>
-    <a class="item"><i class="record icon"></i>Moocs</a>
-    <a class="item"><i class="student icon"></i>Cours spécifiques</a>
-    <a class="item"><i class="book icon"></i>Base de données</a>
-    <a class="item"><i class="film icon"></i>Films</a>
-    <a class="item"><i class="idea icon"></i>Ressources</a>
-    <a class="item"><i class="folder icon"></i>Revues</a>
-    <a class="item"><i class="slack icon"></i>Forum</a>
+  <%= render 'nav_first' %>
   </div>
   <div class="pusher">
     <div class="ui basic segment" style="background-color: #8ea9af;">  <!-- B24F3B -->
@@ -31,7 +22,12 @@
         Cours en ligne / 2ème année :
       </h3>
       <h4>Enseignements Théorique</h4>
-      <p>Histoire de l'art</p>
+      <p>Histoire de l'          <h4 style="font-size: 20px">Enseignement Théorique</h4>
+          <p style="font-size: 18px;"> / Histoire de l'art</p>
+          <p style="font-size: 18px;"> / Histoire du cinéma</p>
+          <p style="font-size: 18px;"> / Sémiologie/Analyse d'images et de textes</p>
+          <p style="font-size: 18px;"> / Atelier d'écriture / Sénario</p>
+          <p style="font-size: 18px;"> / Anglais</p>art</p>
       <p>Histoire du cinéma</p>
       <p>Sémiologie/Analyse d'images et de textes</p>
       <p>Atelier d'écriture / Sénario</p>
@@ -62,52 +58,6 @@
   </div>
 </div>
 
-<!--
-<div class="ui left labeled icon inline vertical main menu sidebar inverted" style="margin-top: 200px;">
-  <a class="item"> <i class="university icon" style="color: #1b1c1d;"></i></a>
-  <a class="item"> <i class="university icon"> </i>Promo 2018</a>
-  <a class="item"><i class="user circle outline layout icon"></i>Realisateur invité</a>
-  <a class="item"><i class="tv icon"></i>Video-conf</a>
-  <a class="item"><i class="record icon"></i>Moocs</a>
-  <a class="item"><i class="student icon"></i>Cours spécifiques</a>
-  <a class="item"><i class="book icon"></i>Base de données</a>
-  <a class="item"><i class="film icon"></i>Films</a>
-  <a class="item"><i class="idea icon"></i>Ressources</a>
-  <a class="item"><i class="folder icon"></i>Revues</a>
-  <a class="item"><i class="slack icon"></i>Forum</a>
-</div>
-
-<div class="pusher">
-  <div class="top ui main menu"><a class="item sidebar"><i class="icon sidebar"></i>Main Menu</a></div>
-   <div class="ui column centered grid">
-    <div class="column">
-      <div class="ui grid container">
-        <div class="row">
-          <p>Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi convenire mnesarchum eu per, quas minimum postulant per id.  Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi convenire mnesarchum eu per, quas minimum postulant per id.</p>
-        </div>
-      </div>
-    </div>
-</div>
-
--->
-  <!--
-  <div class="ui segment">
-    <div class="secondary menu">
-      <div class="ui top attached menu"><a class="item"><i class="sidebar icon"></i>Secondary Menu</a></div>
-      <div class="ui bottom attached segment">
-        <div class="ui labeled icon left inline vertical sidebar menu"><a class="item">Link 1</a><a class="item">Link 2</a><a class="item">Link 3</a></div>
-        <div class="pusher">
-          <div class="ui segment"><img class="ui left floated image" src="http://placehold.it/150x200"/>
-            <p>Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem, est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei ex natum rebum iisque.</p><img class="ui right floated image" src="http://placehold.it/100x100"/>
-            <p>Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.</p>
-            <p>Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi convenire mnesarchum eu per, quas minimum postulant per id.  Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi convenire mnesarchum eu per, quas minimum postulant per id.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  --><!--
-  </div>
-</div> -->
 
 <style media="screen">
 .secondary.menu {
@@ -122,19 +72,6 @@ $('.ui.sidebar').sidebar({
   })
   .sidebar('attach events', '.menu .item');
 
-/* main menu */
-/*
-$('.main.sidebar')
-  .sidebar('attach events', '.item.sidebar')
-  .sidebar('setting', 'transition', 'push');
-
-// secondary menu
-$('.secondary.menu .ui.sidebar')
-  .sidebar({ context: $('.bottom.segment') })
-  .sidebar('attach events', '.secondary.menu .item')
-  .sidebar('setting', 'transition', 'push')
-  .sidebar('setting', 'dimPage', false)
-*/
 </script>
 
 

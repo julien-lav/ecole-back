@@ -1,0 +1,268 @@
+<% provide(:title, "Promo 2018") %>
+<%= render 'layouts/header' %>
+
+<!--
+<div class="ui container">
+  <h1>StaticPages#la_formation</h1>
+  <p>Find me in app/views/static_pages/la_formation.html.erb</p>
+</div>
+-->
+
+<div class="ui top attached demo menu" style="margin-top: -15px;">
+  <a class="item">
+    <i class="sidebar icon"></i> Menu
+  </a>
+</div>
+<div class="ui bottom attached segment">
+  <div class="ui inverted labeled icon left inline vertical demo sidebar menu">
+
+
+    <a class="item" href="promo_2018"><i class="university icon"> </i>Promo 2018</a>
+    <a class="item"><i class="user circle outline layout icon"></i>Realisateur invité</a>
+    <a class="item"><i class="tv icon"></i>Video-conf</a>
+    <a class="item"><i class="record icon"></i>Moocs</a>
+    <a class="item"><i class="student icon"></i>Cours spécifiques</a>
+    <a class="item"><i class="book icon"></i>Base de données</a>
+    <a class="item"><i class="film icon"></i>Films</a>
+    <a class="item"><i class="idea icon"></i>Ressources</a>
+    <a class="item"><i class="folder icon"></i>Revues</a>
+    <a class="item"><i class="slack icon"></i>Forum</a>
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">  <!-- B24F3B -->
+
+      <% if false %>
+      <%= image_tag("real.jpg", :alt => "rss feed", :style => "width: 100%;") %>
+      <% end %>
+
+      <div class="wrap" style="max-width: 80%;">
+        <h3 class="ui header" style="font-size: 120px; text-align: center;">
+          Promo 2019
+        </h3>
+          <h4 style="font-size: 20px; text-align: center;">Bertrand BONELLO</h4>
+          <p  style="text-align: center;">Film Director</p>
+     </div>
+
+
+     <section class="blog-post-teasers">
+  <article class="blog-post-teaser">
+    <figure>
+      <%= image_tag("real.jpg", :alt => "rss feed", :style => "width: 100%;") %>
+
+      <figcaption>
+        <h1><a href="">Nocturama</a></h1>
+      </figcaption>
+    </figure>
+  </article>
+  <article class="blog-post-teaser">
+    <figure>
+      <%= image_tag("real.jpg", :alt => "rss feed", :style => "width: 100%;") %>
+
+      <figcaption>
+        <h1><a href="">Le Dos Rouge</a></h1>
+      </figcaption>
+    </figure>
+  </article>
+  <article class="blog-post-teaser">
+    <figure>
+      <%= image_tag("real.jpg", :alt => "rss feed", :style => "width: 100%;") %>
+
+      <figcaption>
+        <h1><a href="">Saint Laurent</a></h1>
+      </figcaption>
+    </figure>
+  </article>
+  <article class="blog-post-teaser">
+    <figure>
+      <%= image_tag("real.jpg", :alt => "rss feed", :style => "width: 100%;") %>
+
+      <figcaption>
+        <h1><a href="">L'Apollonide</a></h1>
+      </figcaption>
+    </figure>
+  </article>
+  <article class="blog-post-teaser">
+    <figure>
+      <%= image_tag("real.jpg", :alt => "rss feed", :style => "width: 100%;") %>
+      <figcaption>
+        <h1><a href="">Where The Boys Are</a></h1>
+      </figcaption>
+    </figure>
+  </article>
+  <article class="blog-post-teaser">
+    <figure>
+      <%= image_tag("real.jpg", :alt => "rss feed", :style => "width: 100%;") %>
+      <figcaption>
+        <h1><a href="">De La Guerre</a></h1>
+      </figcaption>
+    </figure>
+  </article>
+  <article class="blog-post-teaser">
+    <figure>
+      <%= image_tag("real.jpg", :alt => "rss feed", :style => "width: 100%;") %>
+      <figcaption>
+        <h1><a href="">My New Picuture</a></h1>
+      </figcaption>
+    </figure>
+  </article>
+  <article class="blog-post-teaser">
+    <figure>
+      <%= image_tag("real.jpg", :alt => "rss feed", :style => "width: 100%;") %>
+      <figcaption>
+        <h1><a href="">Ingrid Caven</a></h1>
+      </figcaption>
+    </figure>
+  </article>
+  <article class="blog-post-teaser">
+    <figure>
+      <%= image_tag("real.jpg", :alt => "rss feed", :style => "width: 100%;") %>
+      <figcaption>
+        <h1><a href="">Cindy The Doll Is Mine</a></h1>
+      </figcaption>
+    </figure>
+  </article>
+  <article class="blog-post-teaser">
+    <figure>
+      <%= image_tag("real.jpg", :alt => "rss feed", :style => "width: 100%;") %>
+      <figcaption>
+        <h1><a href="">Tiresia</a></h1>
+      </figcaption>
+    </figure>
+  </article>
+</section>
+
+
+
+     <div style="margin-top:800px;"></div>
+    </div>
+  </div>
+</div>
+<style media="screen">
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+padding: 0;
+font-family: 'Open Sans', sans-serif;
+}
+
+.blog-post-teasers {
+display: flex;
+flex-wrap: wrap;
+padding: 2rem;
+}
+
+.blog-post-teasers > * {
+flex: 1 1 300px;
+align-self: flex-start;
+padding: 1rem;
+}
+
+@supports (display: grid) {
+.blog-post-teasers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 2rem;
+}
+
+.blog-post-teasers > * {
+  padding: 0;
+}
+}
+
+.blog-post-teaser figure {
+position: relative;
+overflow: hidden;
+margin: 0;
+padding: 30% 0;
+cursor: pointer;
+}
+
+.blog-post-teaser figure::before {
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+content: '';
+}
+
+.blog-post-teaser figure:hover img {
+opacity: .25;
+}
+
+.blog-post-teaser figure:hover figcaption {
+opacity: 1;
+transform: translateY(0);
+}
+
+.blog-post-teaser figcaption {
+display: flex;
+align-items: center;
+justify-content: center;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+padding: 2rem;
+text-align: center;
+opacity: 0;
+transform: translateY(1rem);
+transition: all .3s ease-in-out;
+}
+
+.blog-post-teaser figcaption h1 {
+font-size: 24px;
+}
+
+.blog-post-teaser figcaption a {
+text-decoration: none;
+color: #000;
+}
+
+.blog-post-teaser img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+mix-blend-mode: multiply;
+
+transition: all .3s ease-in-out;
+}
+</style>
+
+<style media="screen">
+.secondary.menu {
+margin: 0 5rem;Bertrand Bonello
+}
+</style>
+
+<script type="text/javascript">
+
+$('.ui.sidebar').sidebar({
+    context: $('.bottom.segment')
+  })
+  .sidebar('attach events', '.menu .item');
+
+/* main menu */
+/*
+$('.main.sidebar')
+  .sidebar('attach events', '.item.sidebar')
+  .sidebar('setting', 'transition', 'push');
+
+// secondary menu
+$('.secondary.menu .ui.sidebar')
+  .sidebar({ context: $('.bottom.segment') })
+  .sidebar('attach events', '.secondary.menu .item')
+  .sidebar('setting', 'transition', 'push')
+  .sidebar('setting', 'dimPage', false)
+*/
+</script>
+
+<%= render 'layouts/footer' %>

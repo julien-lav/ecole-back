@@ -62,6 +62,15 @@ class StaticPagesController < ApplicationController
   def la_formation_2_4
   end
 
+  def promo_2018
+  end
+
+  def realisateurs
+  end
+
+  def revues
+  end
+
   def calendar
   end
 end

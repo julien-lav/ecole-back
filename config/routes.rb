@@ -13,7 +13,11 @@ Rails.application.routes.draw do
   get '/year_three', to: 'static_pages#year_three'
   get '/year_four', to: 'static_pages#year_four'
   get '/year_five', to: 'static_pages#year_five'
-  get '/la_formation_1_1', to: 'static_pages#la_formation_1_2'
+  get '/promo_2018', to: 'static_pages#promo_2018'
+  get '/revues', to: 'static_pages#revues'
+  get '/realisateurs', to: 'static_pages#realisateurs'
+
+  get '/la_formation_1_1', to: 'static_pages#la_formation_1_1'
   get '/la_formation_1_2', to: 'static_pages#la_formation_1_2'
   get '/la_formation_1_3', to: 'static_pages#la_formation_1_3'
   get '/la_formation_1_4', to: 'static_pages#la_formation_1_4'
