@@ -38,10 +38,28 @@ class StaticPagesController < ApplicationController
   def accueil
   end
 
-  def la_formation_1
+  def la_formation_1_1
   end
 
-  def la_formation_2
+  def la_formation_2_1
+  end
+
+  def la_formation_1_2
+  end
+
+  def la_formation_2_2
+  end
+
+  def la_formation_1_3
+  end
+
+  def la_formation_2_3
+  end
+
+  def la_formation_1_4
+  end
+
+  def la_formation_2_4
   end
 
   def calendar
