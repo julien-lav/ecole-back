@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/year_five', to: 'static_pages#year_five'
   get '/promo_2018', to: 'static_pages#promo_2018'
   get '/revues', to: 'static_pages#revues'
+  get '/ressources', to: 'static_pages#ressources'
   get '/realisateurs', to: 'static_pages#realisateurs'
 
   get '/la_formation_1_1', to: 'static_pages#la_formation_1_1'

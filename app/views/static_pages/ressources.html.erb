@@ -1,0 +1,90 @@
+<% provide(:title, "La formation") %>
+<%= render 'layouts/header' %>
+<!--
+<div class="ui container">
+  <h1>StaticPages#la_formation</h1>
+  <p>Find me in app/views/static_pages/la_formation.html.erb</p>
+</div>
+-->
+
+<div class="ui top attached demo menu" style="margin-top: -15px;">
+  <a class="item">
+    <i class="sidebar icon"></i> Menu
+  </a>
+</div>
+<div class="ui bottom attached segment">
+  <div class="ui inverted labeled icon left inline vertical demo sidebar menu">
+
+<%= render 'nav_first' %>
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment" style="background-color: #a1d1b6;">  <!-- B24F3B -->
+      <div class="wrap">
+        <h3 class="ui header" style="font-size: 30px;">
+          Ressources
+        </h3>
+        <h4>
+          International
+        </h4>
+        <p>
+          Micropsia </br>
+          <a href="http://www.micropsiacine.com/category/criticas/" target="_blank">http://www.micropsiacine.com/category/criticas/</a>
+        </p>
+        <style media="screen">
+          a { color: black; }
+        </style>
+        <h4>
+          Europe
+        </h4>
+        <h5>
+        France
+        </h5>
+
+        <p>
+          Cahiers de Narratologie </br>
+        <a href="http://journals.openedition.org/narratologie" target="_blank">http://journals.openedition.org/narratologie</a>
+        </p>
+        <p>
+          Panorama-Cinema</br>
+        <a href="http://www.panorama-cinema.com/V2/index.php" target="_blank">http://www.panorama-cinema.com/V2/index.php</a>
+        </p>
+        <p>
+          Questions de communication</br>
+        <a href="http://journals.openedition.org/questionsdecommunication/" target="_blank">http://journals.openedition.org/questionsdecommunication/</a>
+        </p>
+        <p>
+          Collectif Jeune Cine</br>
+        <a href="http://www.cjcinema.org" target="_blank">http://www.cjcinema.org</a>
+        </p>
+        <p>
+          IRMA (Pôle innovation Musique)</br>
+        <a href="http://www.irma.asso.fr" target="_blank">http://www.irma.asso.fr</a>
+        </p>
+        <p>
+          Observatoire des Mondes Numériques en Sciences Sociales</br>
+        <a href="http://www.omnsh.org" target="_blank">http://www.omnsh.org</a>
+        </p>
+      </div>
+     <div style="margin-top:800px;"></div>
+    </div>
+  </div>
+</div>
+
+
+<style media="screen">
+.secondary.menu {
+margin: 0 5rem;
+}
+</style>
+
+<script type="text/javascript">
+
+$('.ui.sidebar').sidebar({
+    context: $('.bottom.segment')
+  })
+  .sidebar('attach events', '.menu .item');
+
+</script>
+
+
+<%= render 'layouts/footer' %>

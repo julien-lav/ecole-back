@@ -71,6 +71,9 @@ class StaticPagesController < ApplicationController
   def revues
   end
 
+  def resssources
+  end
+
   def calendar
   end
 end
