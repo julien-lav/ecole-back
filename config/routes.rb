@@ -29,7 +29,7 @@ Rails.application.routes.draw do
   get '/calendar', to: 'static_pages#calendar'
   resources :users
   get '/list', to: 'users#list'
-  get    '/users/new',  to: 'users#new' # user_new (for now for security purpose)
+  get    '/users/new',  to: 'users#new' # user_new (now for security purpose)
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
