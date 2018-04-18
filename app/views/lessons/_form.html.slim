@@ -1,27 +1,28 @@
-= form_for @lesson do |f|
-  - if @lesson.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@lesson.errors.count, "error")} prohibited this lesson from being saved:"
-      ul
-        - @lesson.errors.full_messages.each do |message|
-          li = message
 
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :description
-    = f.text_field :description
-  .field
-    = f.label :year
-    = f.number_field :year
-  .field
-    = f.label :category
-    = f.text_field :category
-  .field
-    = f.label :content
-    = f.text_area :content
-  .field
-    = f.label :link
-    = f.text_field :link
-  .actions = f.submit
+  = form_for @lesson do |f|
+    - if @lesson.errors.any?
+      #error_explanation
+        h2 = "#{pluralize(@lesson.errors.count, "error")} prohibited this lesson from being saved:"
+        ul
+          - @lesson.errors.full_messages.each do |message|
+            li = message
+    .ui.form.segment
+      .field
+        = f.label :title
+        = f.text_field :title
+      .field
+        = f.label :description
+        = f.text_field :description
+      .field
+        = f.label :year
+        = f.number_field :year
+      .field
+        = f.label :category
+        = f.text_field :category
+      .field
+        = f.label :content
+        = f.text_area :content
+      .field
+        = f.label :link
+        = f.text_field :link
+      .actions = f.submit 

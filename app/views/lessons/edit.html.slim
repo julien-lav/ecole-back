@@ -1,8 +1,10 @@
-h1 Editing lesson
+= render 'layouts/header'
+.ui.container
+  h1 Editing lesson
 
-== render 'form'
+  == render 'form'
 
-=> link_to 'Show', @lesson
-'|
-=< link_to 'Back', lessons_path
-
+  => link_to 'Show', @lesson
+  '|
+  =< link_to 'Back', lessons_path
+= render 'layouts/footer'
