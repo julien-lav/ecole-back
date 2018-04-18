@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  def show
+  def show 
     @user = User.find(params[:id])
     redirect_to info_page_path unless current_user.id == @user.id || current_user.role == true
   end

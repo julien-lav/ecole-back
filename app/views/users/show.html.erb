@@ -20,8 +20,10 @@
             <a><%= @user.email %></a>
           </div>
           <div class="description">
-            <% if @user.role === false %>
+            <% if @user.role === false && @user.current_year != 100  %>
               Etudiant en <%= @user.current_year %> ème année.
+            <% else %>
+              Professeur(e)
             <% end %>
           </div>
         </div>
@@ -46,6 +48,9 @@
         <p>
         <% if logged_in? && current_user.role == true %>
         <%= link_to "Voir la page Admin", admin_path, :class => "header", :style => "color: black;" %> </br>
+        <% end %>
+        <% if logged_in? && current_user.current_year == 100 %>
+        <%= link_to "Ajouter un cours", lessons_path, :class => "header", :style => "color: black;" %> </br>
         <% end %>
         <%= link_to "Voir le calendier", meetings_path, :class => "header", :style => "color: black;" %> </br>
         <a href="https://prepa-cinema.slack.com/" target="_blank" class="header" style="color: black;">

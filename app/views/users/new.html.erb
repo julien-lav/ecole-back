@@ -29,15 +29,15 @@
      <div class="two fields">
        <div class="field">
          <%= f.label :current_year %>
-         <%= f.select :current_year, options_for_select([['1ère année', 1], ['2ème année', 2], ['3ème année', 3], ['4ème année', 4], ['5ème année', 5]]) %>
+         <%= f.select :current_year, options_for_select([['1ère année', 1], ['2ème année', 2], ['3ème année', 3], ['4ème année', 4], ['5ème année', 5], ['Enseignant/Professeur(e)', 100]]) %>
        </div>
        <!-- For safe purpose, this part is disabled, it needs f. something to be active-->
        <div class="field">
          <label>Rôle</label>
          <select class="ui dropdown" name="role">
-           <option value="">Admin/Etudiant</option>
+           <option value="">Admin/Etudiant/Professeur(e)</option>
            <option value="true">Admin</option>
-           <option value="false">Etudiant</option>
+           <option value="false">Etudiant/Professeur(e)</option>
          </select>
       </div>
      </div>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :lessons
   resources :infos
   resources :meetings
   root 'static_pages#home'
@@ -37,6 +38,7 @@ Rails.application.routes.draw do
   get 'contacts/create'
   resources 'contacts', only: [:new, :create], path_names: { new: '' }
   resource 'calendar', only: [:show]
+
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
