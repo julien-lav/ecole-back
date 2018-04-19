@@ -25,8 +25,7 @@ class LessonsController < ApplicationController
   # POST /lessons.json
   def create
 
-
-    @lessons = current_user.lessons.build(lesson_params)
+    @lesson = current_user.lessons.build(lesson_params)
     # @lesson = Lesson.new(lesson_params)
     respond_to do |format|
       if @lesson.save

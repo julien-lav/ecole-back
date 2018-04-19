@@ -39,6 +39,7 @@ class StaticPagesController < ApplicationController
   end
 
   def la_formation_1_1
+    @lessons = Lesson.page(params[:page]).per(10).order("created_at DESC")
   end
 
   def la_formation_2_1

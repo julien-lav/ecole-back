@@ -15,14 +15,22 @@
         = f.text_field :description
       .field
         = f.label :year
-        = f.number_field :year
+        = f.select :year
+           option[value="1" name="1" selected=("selected" if @_source=="1")] 1 ère année
+           option[value="2" name="2" selected=("selected" if @_source=="2")] 2 éme année
       .field
         = f.label :category
-        = f.text_field :category
+        = f.select :category
+           option[value="reference" name="reference" selected=("selected" if @_source=="reference")] Reference
+           option[value="brand" name="brand" selected=("selected" if @_source=="brand")] Brand
+           option[value="model" name="model" selected=("selected" if @_source=="model")] Model
+           option[value="color" name="color"  selected=("selected" if @_source=="color")] Color
+           option[value="ext_product_id" name="ext_product_id" selected=("selected" if @_source=="ext_product_id")] Productid
+           option[value="gender" name="gender" selected=("selected" if @_source=="gender")] Gender
       .field
         = f.label :content
         = f.text_area :content
       .field
         = f.label :link
         = f.text_field :link
-      .actions = f.submit 
+      .actions = f.submit

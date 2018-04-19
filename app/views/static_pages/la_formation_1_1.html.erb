@@ -24,15 +24,43 @@
           Cours en ligne / 1ère année
         </h3>
           <h4 style="font-size: 20px">Enseignement Théorique</h4>
-          <p style="font-size: 18px;"> / Histoire de l'art</p>
-          <p style="font-size: 18px;"> / Histoire du cinéma</p>
-          <p style="font-size: 18px;"> / Sémiologie/Analyse d'images et de textes</p>
-          <p style="font-size: 18px;"> / Atelier d'écriture / Sénario</p>
-          <p style="font-size: 18px;"> / Anglais</p>
+          <a href="#" style="color:black;"><p style="font-size: 18px;"> / Histoire de l'art </p></a>
+          <a href="#" style="color:black;"><p style="font-size: 18px;"> / Histoire du cinéma </p></a>
+          <a href="#" style="color:black;"><p style="font-size: 18px;"> / Sémiologie/Analyse d'images et de textes </p></a>
+          <a href="#" style="color:black;"><p style="font-size: 18px;"> / Atelier d'écriture / Sénario </p></a>
+          <a href="#" style="color:black;"><p style="font-size: 18px;"> / Anglais </p></a>
+          <p><%= link_to "Retour", year_one_path, :class => "ui secondary button" %></p>
      </div>
      <div style="margin-top:800px;"></div>
     </div>
   </div>
+</div>
+<!--
+<div class="ui container">
+  <% @lessons.each do |info| %>
+    <div class="wrap" style="opacity: 0.8 !important;">
+      <h1 style="color: #1b1c1d;"><%= info.title %></h1>
+      <article>
+        <p style="font-size: 15px;">
+           <%= info.description %>
+        </p>
+        <p style="font-size: 15px;">
+           <%= info.content %>
+        </p>
+        <p style="font-size: 15px;">
+           <%= info.link %>
+        </p>
+        <p style="font-size: 15px;">
+           Author
+        </p>
+      </article>
+    </div>
+  <% end %>
+  <span style="color: white;">
+    <%= paginate @lessons %>
+  </span>
+-->
+
 </div>
 
 <style media="screen">
