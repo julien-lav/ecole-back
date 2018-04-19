@@ -16,3 +16,12 @@ config.action_mailer.smtp_settings = {
 User.create(:name => 'Admin', :email => 'admin@mail.fr', :current_year => 5, :role => true, :password => 'antoine', :password_confirmation => 'antoine')
 
 User.create(:name => 'Admin', :email => 'blabla@mail.fr', :current_year => 5, :role => false, :password => 'kjazbdlh', :password_confirmation => 'kjazbdlh')
+
+
+<h4 style="font-size: 20px">Enseignement Théorique</h4>
+<a href="#" style="color:black;"><p style="font-size: 18px;"> / Histoire de l'art </p></a>
+<a href="#" style="color:black;"><p style="font-size: 18px;"> / Histoire du cinéma </p></a>
+<a href="#" style="color:black;"><p style="font-size: 18px;"> / Sémiologie/Analyse d'images et de textes </p></a>
+<a href="#" style="color:black;"><p style="font-size: 18px;"> / Atelier d'écriture / Sénario </p></a>
+<a href="#" style="color:black;"><p style="font-size: 18px;"> / Anglais </p></a>
+<p><%= link_to "Retour", year_one_path, :class => "ui secondary button" %></p>
