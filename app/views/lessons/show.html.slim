@@ -1,25 +1,28 @@
 = render 'layouts/header'
 .ui.container
   p#notice = notice
-
-  p
-    strong Title:
-    = @lesson.title
-  p
-    strong Description:
-    = @lesson.description
-  p
-    strong Year:
-    = @lesson.year
-  p
-    strong Category:
-    = @lesson.category
-  p
-    strong Content:
-    = @lesson.content
-  p
-    strong Link:
-    = @lesson.link
+  .ui.raised.segment
+    p
+      strong Title: &nbsp;
+      = @lesson.title
+    p
+      strong Description: &nbsp;
+      = @lesson.description
+    p
+      strong Year: &nbsp;
+      = @lesson.year
+    p
+      strong Category: &nbsp;
+      = @lesson.category
+    p
+      strong Content: &nbsp;
+      = @lesson.content
+    p
+      strong Link: &nbsp;
+      = @lesson.link
+    p
+      strong Auteur: &nbsp;
+      = @lesson.name
 
   => link_to 'Edit', edit_lesson_path(@lesson)
   '|
