@@ -6,22 +6,24 @@
   <h1 style="color: white;">StaticPages#admin</h1>
   <!-- <p>Find me in app/views/static_pages/admin.html.erb</p> -->
 </div>
-
 <div class="ui container">
-  <p>
-    <%= link_to 'Ajouter une date au calendrier', meetings_path, :class => "ui secondary button" %>
-  </p>
-  <p>
-    <%= link_to 'Ajouter un étudiant', users_new_path, :class => "ui secondary button" %>
-  </p>
-  <p>
-    <%= link_to 'Liste de tous les  étudiants', list_path, :class => "ui secondary button" %>
-  </p>
-  <p>
-    <%= link_to 'Ajouter une Info', new_info_path, :class => "ui secondary button" %>
-  </p>
-  <p>
-    <%= link_to 'Ajouter un cours', meetings_path, :class => "ui secondary button" %>
-  </p>
+  <div class="ui raised segment">
+    <p>
+      <%= link_to 'Ajouter une date au calendrier', meetings_path, :class => "ui secondary button",  :style => "width:240px; margin:10px 0 10px 0;"%>
+      &nbsp; &nbsp;
+      <%= link_to 'Ajouter une date au calendrier', new_meeting_path, :class => "ui secondary button",  :style => "width:240px; margin:10px 0 10px 0;"%>
+    </p>
+    <p>
+      <%= link_to 'Ajouter un étudiant', users_new_path, :class => "ui secondary button",  :style => "width:240px; margin:10px 0 10px 0;"%>
+      &nbsp; &nbsp;
+    <%= link_to 'Liste de tous les  étudiants', list_path, :class => "ui secondary button",  :style => "width:240px; margin:10px 0 10px 0;"%>
+    <p>
+      <%= link_to 'Ajouter une Info', new_info_path, :class => "ui secondary button",  :style => "width:240px; margin:10px 0 10px 0;"%>
+    </p>
+    <p>
+      <%= link_to 'Ajouter un cours', new_lesson_path, :class => "ui secondary button",  :style => "width:240px; margin:10px 0 10px 0;"%>
+    </p>
+  </div>
 </div>
+
 <%= render 'layouts/footer' %>

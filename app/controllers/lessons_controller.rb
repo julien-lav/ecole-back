@@ -4,6 +4,7 @@ class LessonsController < ApplicationController
   # GET /lessons
   # GET /lessons.json
   def index
+    redirect_to info_page_path unless logged_in?
     @lessons = Lesson.all
   end
 
@@ -15,6 +16,7 @@ class LessonsController < ApplicationController
 
   # GET /lessons/new
   def new
+    redirect_to info_page_path unless logged_in? && current_user.current_year == 100
     @lesson = Lesson.new
   end
 

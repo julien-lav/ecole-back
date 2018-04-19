@@ -49,12 +49,12 @@
       <div class="ui segment">
         <p>
         <% if logged_in? && current_user.role == true %>
-        <%= link_to "Aller à la page Admin", admin_path, :class => "header", :style => "color: black;" %> </br>
+        <%= link_to "Aller à la page Admin", admin_path, :class => "ui secondary button", :style => "width:210px; margin:10px 0 10px 0;" %> </br>
         <% end %>
         <% if logged_in? && current_user.current_year == 100 %>
-        <%= link_to "Ajouter un cours", new_lesson_path, :class => "header", :style => "color: black;" %> </br>
+        <%= link_to "Ajouter un cours", new_lesson_path, :class => "ui secondary button", :style => "width:210px; margin:10px 0 10px 0;" %> </br>
         <% end %>
-        <%= link_to "Voir le calendier", meetings_path, :class => "header", :style => "color: black;" %> </br>
+        <%= link_to "Voir le calendier", meetings_path, :class => "ui secondary button", :style => "width:210px; margin:10px 0 10px 0;" %> </br>
       </p>
       </div>
       <div class="ui segment">

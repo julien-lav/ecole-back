@@ -7,6 +7,7 @@ class MeetingsController < ApplicationController
   def show
   end
   def new
+    redirect_to info_page_path unless logged_in? && current_user.role == true
     @meeting = Meeting.new
   end
   def edit

@@ -20,8 +20,8 @@
           <td style="font-size: 20px;"> <%= meeting.name %> &nbsp; </td>
           <td style="font-size: 20px;"> <%= meeting.start_time.strftime("%H heure(s) %M") %> &nbsp; </td>
           <td style="font-size: 20px;"> <%= meeting.end_time.strftime("%H heure(s) %M") %> &nbsp; </td>
-          <td style="font-size: 20px;"><span style="margin-left: 15px;">&nbsp;</span> <%= link_to 'Show', meeting, class: 'ui secondary button'  %> &nbsp; </td>
           <% if logged_in? && current_user.role == true %>
+          <td style="font-size: 20px;"><span style="margin-left: 15px;">&nbsp;</span> <%= link_to 'Show', meeting, class: 'ui secondary button'  %> &nbsp; </td>
           <td style="font-size: 20px;"><span style="margin-left: 15px;">&nbsp;</span> <%= link_to 'Edit', edit_meeting_path(meeting), class: 'ui secondary button'  %> &nbsp; </td>
           <td style="font-size: 20px;"><span style="margin-left: 15px;">&nbsp;</span> <%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, :class => 'delete_meeting', class: 'ui negative button' %> </td>
           <% end %>
